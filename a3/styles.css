@@ -57,9 +57,10 @@ aside input[type='checkbox']:checked ~ div {
 aside > span {
 	width: var(--tab-height);
 	height: var(--tab-height);
-	font-size: var(--tab-height);
+
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	position: absolute;
 	z-index: 1;
 	top:0;
@@ -70,7 +71,7 @@ aside > span {
 }
 aside > span > span {
 	transform: rotate(180deg);
-	font-size: var(--tab-height);
+	font-size: calc(0.75 * var(--tab-height));
 	transition-property: transform;
 	transition-duration: 1s;
 }

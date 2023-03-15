@@ -3,20 +3,64 @@ footer {
 	bottom: 0;
 	left: 0;
 	text-align: right;
-	
+	width: 100vw;
+}
+footer input[type='checkbox'],
+footer > span  {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	bottom: var(--tab-height);
+	height: var(--tab-height);
+	width: var(--tab-height);
 }
 footer input[type='checkbox'] {
-	cursor: pointer;
-	height: 50px;
-	width: 50px;
+	z-index: 5;
+	opacity: 0;
+}
+footer > span {
+	z-index: 4;
+	display: block;
+	border: 1px solid black;
+	border-right: none;
+	border-top-left-radius: 20px;
+	border-bottom: none;
 }
 footer div {
 	width: 100vw;
-	height: 50px;
+	height: var(--nav-height);
 	border-top: 1px solid black;
+	position: fixed;
+	bottom: 0;
+}
+
+footer input[type='checkbox'],
+footer div, 
+footer input[type='checkbox'] ~ span {
+	transition: bottom 1s;
+}
+footer input[type='checkbox']:checked {
+	bottom: 0;
+}
+footer input[type='checkbox']:checked ~ div {
+	bottom:  calc(-1 * var(--tab-height));
 }
 
 footer > span > span {
-	transform: rotate(180deg);
-	font-size: var(--tab-height);
+	font-size: calc(0.75 * var(--tab-height));
+	height: var(--tab-height);
+	width: var(--tab-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(0deg);
+	transition: transform 1s;
+}
+
+footer input[type='checkbox']:checked ~ span {
+	bottom: 0;
+}
+
+footer input[type='checkbox']:checked ~ span > span {
+ transform: rotate(180deg);
 }
