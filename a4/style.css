@@ -1,0 +1,20 @@
+div#ball {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	border-radius: 50%;
+	position: relative;
+	animation-name: slide-right;
+	animation-iteration-count: 2;
+	animation-duration: 3s;
+	animation-fill-mode: backwards;
+}
+@keyframes slide-right {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: calc(100vw - 100px);
+	}
+	
+}
