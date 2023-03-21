@@ -1,0 +1,75 @@
+aside {
+	position: relative;
+	width: var(--aside-width);
+	height: calc(100vh - var(--nav-height));
+}
+aside div {
+  width: var(--aside-width);
+  height: calc(100vh - var(--nav-height));
+  border-right: 1px solid black;
+
+}
+
+aside input[type='checkbox'] {
+  display: block;
+  width: var(--tab-height);
+  height:var(--tab-height);
+  border: 1px solid black;
+  position: absolute;
+  z-index: 2;
+  right: calc(var(--tab-height) * -1);
+  border-top: none;
+  cursor: pointer;
+  transition: right 1s;
+  opacity: 0;
+}
+aside input[type='checkbox']:checked {
+	right: calc(var(--aside-width) - var(--tab-height));
+}
+
+aside input[type='checkbox'] ~ div {
+	position: relative;
+	left: 0;
+	transition: left 1s;
+}
+aside input[type='checkbox']:checked ~ div {
+	left: calc(var(--aside-width) * -1);
+}
+
+aside > span {
+	width: var(--tab-height);
+	height: var(--tab-height);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 1;
+	top:0;
+	border: 1px solid black;
+	border-bottom-right-radius: 20px;
+	border-top: none;
+	border-left: none;
+}
+
+aside > span > span {
+	display: flex;
+	align-items: center;
+	transform: rotate(180deg);
+	font-size: calc(0.75 * var(--tab-height));
+	transition-property: transform;
+	transition-duration: 1s;
+}
+aside > span > span > img {
+	width: 40px;
+}
+aside input[type='checkbox'] ~ span {
+	right: calc(var(--tab-height) * -1);
+	transition-property: right;
+	transition-duration: 1s;
+}
+aside input[type='checkbox']:checked ~ span > span {
+	transform: rotate(0);
+}
+aside input[type='checkbox']:checked ~ span {
+	right: calc(var(--aside-width) - var(--tab-height));
+}

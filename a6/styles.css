@@ -14,12 +14,14 @@
   box-sizing: border-box;
 }
 
-nav {
-  width: 100vw;
-  height: var(--nav-height);
-  border-bottom: 1px solid black;
+main {
+	display: flex;
 }
 
+main div {
+	display: flex;
+	width: calc(100vw - 200px);
+}
 
 .fiveserver-info-wrapper_info {
 	display: none !important;

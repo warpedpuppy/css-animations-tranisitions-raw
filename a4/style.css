@@ -16,5 +16,4 @@ div#ball {
 	100% {
 		left: calc(100vw - 100px);
 	}
-	
 }

@@ -1,0 +1,82 @@
+nav {
+	font-size: 12px;
+	background-color: black;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 50px;
+}
+
+nav h1 {
+	position: absolute;
+	z-index: 34;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	width: 100vw;
+	height: 50px;
+	color: white;
+	background-color: black;
+}
+nav input[type="checkbox"] {
+	position: absolute;
+	z-index: 36;
+	cursor: pointer;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	opacity: 0;
+}
+nav .hamburger {
+	position: absolute;
+	z-index: 35;
+	right: 10px;
+	width: 40px;
+}
+nav .hamburger span {
+	display: block;
+	border-bottom: 3px solid white;
+	margin-bottom: 4px;
+}
+nav .hamburger span {
+	transition: transform var(--transition-speed);
+}
+nav .hamburger span:last-child {
+	margin-bottom: 0;
+}
+nav input[type="checkbox"] + .hamburger + ul {
+	position: absolute;
+	z-index: 31;
+	left: 0;
+	top: calc(4 * -36px); /* 36 = 20px top and bottom padding plus 16px font size */
+	transition: top 1s;
+}
+input[type="checkbox"] + .hamburger + ul li a {
+	display: block;
+	width: 100vw;
+	font-size: 16px;
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: #333;
+	transition: background-color 0.5s, color 0.5s;
+}
+input[type="checkbox"] + .hamburger + ul li a:hover {
+	background-color: #999;
+	color: black;
+}
+
+
+/* TRANSITIONS WHEN CHECKED  */
+input[type="checkbox"]:checked + .hamburger span:first-child{
+	transform: translate(0, 7px);
+}
+input[type="checkbox"]:checked + .hamburger span:last-child{
+	transform: translate(0, -7px);
+}
+input[type="checkbox"]:checked + .hamburger + ul {
+	top: 50px;
+}
+
