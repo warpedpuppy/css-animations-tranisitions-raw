@@ -1,0 +1,41 @@
+#g1107,
+#g1107-5 {
+	animation-name: rotate;
+	animation-duration: 5s;
+	transform-origin: center;
+	animation-iteration-count: infinite;
+}
+#g1107-5 {
+	animation-name: rotate2;
+	animation-direction: reverse;
+}
+#g2138 {
+	animation-name: spin;
+	animation-duration: 5s;
+	transform-origin: center;
+	animation-iteration-count: infinite;
+} 
+@keyframes spin {
+	0% {
+		transform: rotate3d(0, 0, 0, 192deg)
+	}
+	100% {
+		transform: rotate3d(0, 2, 0, 192deg)
+	}
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0) ;
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate2 {
+	0% {
+		transform: rotate(0) scale(0.5);
+	}
+	100% {
+		transform: rotate(360deg) scale(0.5);
+	}
+}
