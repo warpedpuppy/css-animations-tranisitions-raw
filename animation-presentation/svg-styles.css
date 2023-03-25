@@ -1,0 +1,82 @@
+.cls-1 {
+  fill: none;
+}
+
+.cls-2 {
+  fill: url(#linear-gradient);
+}
+
+.cls-3 {
+  fill: #00aeef;
+}
+
+.cls-4 {
+  fill: #231f20;
+}
+
+.cls-5 {
+  opacity: 0.43;
+}
+
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8 {
+  stroke-width: 0.25px;
+}
+
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9,
+.cls-10 {
+  stroke-miterlimit: 10;
+}
+
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-10 {
+  stroke: #231f20;
+}
+
+.cls-5,
+.cls-7 {
+  fill: #fff;
+}
+
+.cls-6,
+.cls-9 {
+  fill: #fff200;
+}
+
+.cls-8 {
+  fill: #2e3192;
+}
+
+.cls-9 {
+  stroke: #6d6e71;
+}
+
+.cls-11 {
+  fill: url(#linear-gradient-2);
+}
+
+.cls-12 {
+  opacity: 0.34;
+}
+
+.cls-10 {
+  fill: url(#radial-gradient-2);
+}
+
+.cls-13 {
+  opacity: 0.54;
+}
+
+.cls-14 {
+  fill: url(#radial-gradient);
+  opacity: 0.3;
+}

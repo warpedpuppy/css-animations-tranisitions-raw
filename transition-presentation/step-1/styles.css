@@ -1,0 +1,85 @@
+:root {
+  --transition-speed: 0.5s;
+}
+
+nav {
+  position: relative;
+  border: 5px solid red;
+}
+
+nav input[type="checkbox"] {
+  /* position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0; */
+  /* display:none; */
+}
+nav .hamburger {
+  /* position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0; */
+  border: 5px solid green;
+}
+
+nav .hamburger span {
+  /* transition-property: transform;
+	transition-duration: var(--transition-speed);
+	transition-delay: 0.5s; 
+	transition-timing-function: ease-in-out; */
+
+  transition: transform var(--transition-speed);
+}
+
+/* TRANSITIONS WHEN CHECKED  */
+input[type="checkbox"]:checked + .hamburger span:first-child {
+  transform: translate(0, 40px);
+}
+input[type="checkbox"]:checked + .hamburger span:last-child {
+  transform: translate(0, -40px);
+}
+
+/* BACKGROUND CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+}
+
+nav {
+  background-color: black;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+  width: 210px;
+}
+
+nav input[type="checkbox"] {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+}
+nav .hamburger {
+  right: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav .hamburger span {
+  display: block;
+  border-bottom: 20px solid white;
+  margin-bottom: 20px;
+}
+
+nav .hamburger span:last-child {
+  margin-bottom: 0;
+}
