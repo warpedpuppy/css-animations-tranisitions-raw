@@ -1,0 +1,119 @@
+:root {
+  --nav-height: 50px;
+  --tab-height: 50px;
+  --aside-width: 150px;
+  --transition-speed: 2s;
+}
+
+
+
+
+
+#transition-example-project aside ul li button {
+	position: relative;
+}
+
+#transition-example-project aside ul li button span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	background-color: purple;
+	transition: left 2s, background-color 2s;
+  }
+  
+  #transition-example-project aside ul li button:hover {
+	color: black;
+	background-color: white;
+  }
+  
+  #transition-example-project aside ul li button:hover span {
+	left: calc(100% - 5px);
+	background-color: black;
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#transition-example-project {
+  width: 100vw;
+  height: 100vh;
+}
+
+#transition-example-project main {
+  display: flex;
+}
+
+#transition-example-project main div {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* SIDEBAR  */
+
+#transition-example-project aside {
+  z-index: 30;
+  width: 300px;
+  display: block;
+  margin: 50px auto;
+}
+
+#transition-example-project aside ul {
+	list-style-type: none;
+  }
+
+#transition-example-project aside ul li button {
+  width: 100%;
+  border: none;
+  background-color: black;
+  text-align: left;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#transition-example-project aside ul li button span {
+  height: 100%;
+}
+
+
+
+
+

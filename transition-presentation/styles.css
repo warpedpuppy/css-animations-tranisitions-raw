@@ -161,6 +161,9 @@ body {
   background-color: black;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+#transition-example-project aside ul {
+	list-style-type: none;
+  }
 
 #transition-example-project aside ul li button {
   width: 100%;
