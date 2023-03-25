@@ -1,16 +1,16 @@
 button {
-	background-color: black;
-	color: white;
-  /* transition-property: background-color;
- transition-duration: 0.5s;
- transition-delay: 0.5s;
- transition-timing-function: ease-in-out; */
+  background-color: black;
+  color: white;
+  /* transition-property: background-color;*/
+  /* transition-duration: 0.5s; */
+  /* transition-delay: 0.5s; */
+  /* transition-timing-function: ease-in-out;  */
 
   /* SHORTHAND */
   transition: background-color 1s, transform 0.25s;
 }
 button:hover {
-	 background-color: black;
+  background-color: black;
   color: white;
   background-color: white;
   transform: scale(1.1);
@@ -27,11 +27,7 @@ button:active {
   margin: 0;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {

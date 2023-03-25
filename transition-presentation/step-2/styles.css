@@ -7,6 +7,7 @@
 
 aside ul li button {
   position: relative;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 aside ul li button span {
@@ -33,19 +34,13 @@ aside ul li button:hover span {
   margin: 0;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* SIDEBAR  */
 
 aside {
-  z-index: 30;
   width: 300px;
-  display: block;
   margin: 50px auto;
 }
 
@@ -61,11 +56,8 @@ aside ul li button {
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  text-decoration: none;
   color: white;
-  display: block;
   padding: 10px;
-  transition: background-color 0.5s, color 0.5s;
 }
 
 aside ul li button span {
