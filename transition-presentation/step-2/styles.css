@@ -1,59 +1,38 @@
 :root {
   --nav-height: 50px;
   --tab-height: 50px;
-  --transition-speed: 0.25s;
+  --aside-width: 150px;
+  --transition-speed: 2s;
 }
 
-#transition-example-project nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: var(--nav-height);
-  }
-
-
-#transition-example-project nav h1 {
-  /* opacity: 0.25; */
+aside ul li button {
+  position: relative;
 }
 
-/* 36 = 20px top and bottom padding plus 16px font size */
-#transition-example-project nav input[type="checkbox"] + .hamburger + ul {
-	position: absolute;
-	z-index: 31;
-	left: 0;
-	top: calc(4 * -36px); 
-	transition: top 1s;
+aside ul li button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  background-color: #ff00ff;
+  transition: left 2s, background-color 2s;
 }
 
-#transition-example-project nav input[type="checkbox"] + .hamburger + ul li button {
-  transition: background-color 0.5s, color 0.5s;
-  background-color: #333;
-  color: white;
-}
-
-#transition-example-project nav input[type="checkbox"] + .hamburger + ul li button:hover {
-  background-color: #999;
+aside ul li button:hover {
   color: black;
+  background-color: white;
 }
 
-/* TRANSITIONS WHEN CHECKED  */
-#transition-example-project input[type="checkbox"]:checked + .hamburger + ul {
-  top: 50px;
+aside ul li button:hover span {
+  left: calc(100% - 5px);
+  background-color: black;
 }
-
-
-
-
-
-
-
 
 * {
   padding: 0;
   margin: 0;
 }
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -61,99 +40,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#transition-example-project {
-  width: 100vw;
-  height: 100vh;
-}
+/* SIDEBAR  */
 
-#transition-example-project main {
-  display: flex;
-}
-
-#transition-example-project main div {
-  width: 100%;
-}
-
-/* NAV */
-
-#transition-example-project nav {
-
-  background-color: black;
-  position: relative;
-
-  width: 100%;
-}
-
-#transition-example-project nav h1 {
-  position: absolute;
-  z-index: 34;
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  width: 100%;
-  height: 50px;
-  color: white;
-  background-color: black;
-}
-#transition-example-project nav input[type="checkbox"] {
-  position: absolute;
-  z-index: 36;
-  cursor: pointer;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-}
-#transition-example-project nav .hamburger {
-  position: absolute;
-  z-index: 35;
-  right: 10px;
-  width: 40px;
-}
-#transition-example-project nav .hamburger span {
+aside {
+  z-index: 30;
+  width: 300px;
   display: block;
-  border-bottom: 3px solid white;
-  margin-bottom: 4px;
+  margin: 50px auto;
 }
-#transition-example-project nav .hamburger span {
-  transition: transform var(--transition-speed);
+
+aside ul {
+  list-style-type: none;
 }
-#transition-example-project nav .hamburger span:last-child {
-  margin-bottom: 0;
-}
-#transition-example-project nav input[type="checkbox"] + .hamburger + ul {
-	width: 100vw;
-  }
-#transition-example-project
-  nav
-  input[type="checkbox"]
-  + .hamburger
-  + ul
-  li
-  button {
-  display: block;
+
+aside ul li button {
+  width: 100%;
+  border: none;
+  background-color: black;
   text-align: left;
   cursor: pointer;
-  border: none;
-  width: 100%;
-  font-size: 16px;
- 
+  font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
-  padding: 10px 20px;
-
+  color: white;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* TRANSITIONS WHEN CHECKED  */
-#transition-example-project
-  input[type="checkbox"]:checked
-  + .hamburger
-  span:first-child {
-  transform: translate(0, 7px);
-}
-#transition-example-project
-  input[type="checkbox"]:checked
-  + .hamburger
-  span:last-child {
-  transform: translate(0, -7px);
+aside ul li button span {
+  height: 100%;
 }

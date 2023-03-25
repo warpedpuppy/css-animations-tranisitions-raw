@@ -1,119 +1,84 @@
 :root {
-  --nav-height: 50px;
-  --tab-height: 50px;
-  --aside-width: 150px;
-  --transition-speed: 2s;
+  --transition-speed: 0.5s;
 }
 
-
-
-
-
-#transition-example-project aside ul li button {
-	position: relative;
+nav {
+  position: relative;
+  border: 5px solid red;
 }
 
-#transition-example-project aside ul li button span {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 5px;
-	background-color: rgba(255, 255, 255, 0.5);
-	background-color: purple;
-	transition: left 2s, background-color 2s;
-  }
-  
-  #transition-example-project aside ul li button:hover {
-	color: black;
-	background-color: white;
-  }
-  
-  #transition-example-project aside ul li button:hover span {
-	left: calc(100% - 5px);
-	background-color: black;
-  }
-  
+nav input[type="checkbox"] {
+  /* position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0; */
+  /* display:none; */
+}
+nav .hamburger {
+  /* position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0; */
+  border: 5px solid green;
+}
 
-  
+nav .hamburger span {
+  /* transition-property: transform;
+	transition-duration: var(--transition-speed);
+	transition-delay: 0.5s; 
+	transition-timing-function: ease-in-out; */
+  /* transition: transform var(--transition-speed); */
+}
 
+/* TRANSITIONS WHEN CHECKED  */
+input[type="checkbox"]:checked + .hamburger span:first-child {
+  /* transform: translate(0, 40px); */
+}
+input[type="checkbox"]:checked + .hamburger span:last-child {
+  /* transform: translate(0, -40px); */
+}
 
-
-
-
-
-
-
+/* BACKGROUND CSS */
 
 * {
+  margin: 0;
   padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#transition-example-project {
-  width: 100vw;
-  height: 100vh;
-}
-
-#transition-example-project main {
-  display: flex;
-}
-
-#transition-example-project main div {
-  width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* SIDEBAR  */
-
-#transition-example-project aside {
-  z-index: 30;
-  width: 300px;
-  display: block;
-  margin: 50px auto;
-}
-
-#transition-example-project aside ul {
-	list-style-type: none;
-  }
-
-#transition-example-project aside ul li button {
-  width: 100%;
-  border: none;
   background-color: black;
-  text-align: left;
+  text-align: center;
+}
+
+nav {
+  background-color: black;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+  width: 210px;
+}
+
+nav input[type="checkbox"] {
   cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
+  width: 200px;
+  height: 200px;
+}
+nav .hamburger {
+  right: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav .hamburger span {
   display: block;
-  padding: 10px;
-  transition: background-color 0.5s, color 0.5s;
+  border-bottom: 20px solid white;
+  margin-bottom: 20px;
 }
 
-#transition-example-project aside ul li button span {
-  height: 100%;
+nav .hamburger span:last-child {
+  margin-bottom: 0;
 }
-
-
-
-
-
