@@ -29,15 +29,15 @@ nav .hamburger span {
 	transition-delay: 0.5s; 
 	transition-timing-function: ease-in-out; */
 
-  transition: transform var(--transition-speed);
+  /* transition: transform var(--transition-speed); */
 }
 
 /* TRANSITIONS WHEN CHECKED  */
 input[type="checkbox"]:checked + .hamburger span:first-child {
-  transform: translate(0, 40px);
+  /* transform: translate(0, 40px); */
 }
 input[type="checkbox"]:checked + .hamburger span:last-child {
-  transform: translate(0, -40px);
+  /* transform: translate(0, -40px); */
 }
 
 /* BACKGROUND CSS */
