@@ -1,0 +1,72 @@
+body * {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+svg {
+  width: 500px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+svg:not(.no-fill-box) * {
+  transform-box: fill-box;
+}
+
+.yellow-square {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+svg:not(.rotate-before-translate, .move-new-way) .yellow-square {
+  animation-name: move;
+}
+svg.rotate-before-translate .yellow-square {
+  animation-name: move-rotate-before-translate;
+}
+svg:not(.no-transform-origin) .yellow-square {
+  transform-origin: center;
+}
+svg.move-new-way .yellow-square {
+  animation-name: move-new-way;
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 50px) rotate(0);
+  }
+  100% {
+    transform: translate(500px, 50px) rotate(360deg);
+  }
+}
+
+@keyframes move-rotate-before-translate {
+  0% {
+    transform: rotate(0) translate(250px, 0);
+  }
+  100% {
+    transform: rotate(360deg) translate(250px, 500px);
+  }
+}
+
+@keyframes move-new-way {
+  0% {
+    translate: 0 50px;
+    rotate: 0;
+  }
+  100% {
+    rotate: 360deg;
+    translate: 500px 50px;
+  }
+}
+
+.cls-1 {
+  fill: #00aeef;
+}
+
+.cls-2 {
+  fill: #fff200;
+  stroke: #231f20;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6px;
+}

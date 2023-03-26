@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div id="cont">
+		<h4>correct:</h4>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+		<rect class="cls-1" width="500" height="100"/>
+		<rect class="cls-2 yellow-square" x="-25" y="-25" width="50" height="50"/>
+	  </svg>
+
+	  <h4>without "transform-box: fill-box":</h4>
+	<svg xmlns="http://www.w3.org/2000/svg" class="no-fill-box" viewBox="0 0 500 100">
+		<rect class="cls-1" width="500" height="100"/>
+		<rect  class="cls-2 yellow-square" x="-25" y="-25" width="50" height="50"/>
+	  </svg>
+
+	<h4>without "transform-origin: center":</h4>
+	<svg xmlns="http://www.w3.org/2000/svg" class="no-transform-origin" viewBox="0 0 500 100">
+		<rect class="cls-1" width="500" height="100"/>
+		<rect  class="cls-2 yellow-square" x="-25" y="-25" width="50" height="50"/>
+	  </svg>
+
+	<h4>if you put rotate before translate:</h4>
+	<svg xmlns="http://www.w3.org/2000/svg" class="rotate-before-translate" viewBox="0 0 500 100">
+		<rect class="cls-1" width="500" height="100"/>
+		<rect  class="cls-2 yellow-square" x="-25" y="-25" width="50" height="50"/>
+	  </svg>
+	  <h4>new way to write the code: without "transform"!:</h4>
+	<svg xmlns="http://www.w3.org/2000/svg" class="move-new-way" viewBox="0 0 500 100">
+		<rect class="cls-1" width="500" height="100"/>
+		<rect  class="cls-2 yellow-square" x="-25" y="-25" width="50" height="50"/>
+	  </svg>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+svg {
+	
+}
+
+svg * {
+	
+}
+
+svg g {
+	
+}
+
+#arrow1,
+#arrow2 {
+	
+}
+
+#arrow2 {
+	
+}
+
+#arrow3,
+#arrow4 {
+	
+}
+
+#arrow4 {
+	
+}
+
+#arrow5,
+#arrow6 {
+	
+}
+
+#arrow6 {
+	
+}
+
+#arrow7,
+#arrow8 {
+	
+}
+
+#arrow8 {
+	
+}
+
+#star polygon{
+	
+}
+
+@keyframes star {
+	
+}
+
+@keyframes horizontal {
+	
+}
+
+@keyframes vertical {
+	
+}
+
+
+@keyframes diagonal {
+	
+}
+
+@keyframes diagonal-inverse {
+	
+}
+
+.cls-1 {
+  stroke-width: 5px;
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+  stroke: #231f20;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cls-1, .cls-7 {
+  fill: #fff200;
+}
+
+.cls-10 {
+  fill: #00aeef;
+}
+
+.cls-2 {
+  fill: #d7df23;
+}
+
+.cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+  stroke-width: 2px;
+}
+
+.cls-3 {
+  fill: #ed2590;
+}
+
+.cls-4 {
+  fill: #2e3192;
+}
+
+.cls-5 {
+  fill: #662d91;
+}
+
+.cls-6 {
+  fill: #39b54a;
+}
+
+.cls-8 {
+  fill: #ed1c24;
+}
+
+.cls-9 {
+  fill: #f15a29;
+}

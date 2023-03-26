@@ -39,7 +39,7 @@ svg:hover #yellow-square {
 	}
 	50% {
 		transform: translate(250px,250px) rotate(180deg) scale(0.5);
-		fill: red;
+		fill: orange;
 	}
 	100% {
 		transform:translate(250px,500px) rotate(360deg) scale(1);
