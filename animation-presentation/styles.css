@@ -81,7 +81,7 @@ svg g {
 	}
 	50% {
 		fill: #662d91;
-		transform: rotate(360deg) scale(0.05);
+		transform: rotate(180deg) scale(0.05);
 	}
 	60% {
 		fill: #2e3192;
@@ -96,7 +96,7 @@ svg g {
 		fill: #f15a29;
 	}
 	100% {
-		transform:rotate(0) scale(2);
+		transform:rotate(360deg) scale(2);
 		fill:  #d7df23;
 	}
 }
