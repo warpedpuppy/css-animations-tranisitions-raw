@@ -1,0 +1,87 @@
+svg {
+	width: 500px;
+	height: 500px;
+	border:  1px solid black;
+}
+
+svg * {
+	transform-box: fill-box;
+}
+
+
+#yellow-square {
+	transform-origin: center;
+	animation-name: fall-1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* 
+1) importance of looking at existing html attributes! The x and y are carried over from the software that created the elements. Comment out the first rect under id "yellow-square" and remove the comments from the second.
+*/
+@keyframes fall {
+	0% {
+		transform: translate(250px,0);
+	}
+	100% {
+		transform: translate(250px,500px);
+	}
+}
+
+/* 
+2) importance of transform-box: fill-box (comment out transform-box above) 
+
+3) importance of tranform-origin (restore transform-box, now comment out transform-origin)
+*/
+@keyframes fall-1 {
+	0% {
+		transform: translate(250px,0) rotate(0);
+	}
+	100% {
+		transform: translate(250px,500px) rotate(360deg);
+	}
+}
+
+/* 
+3) importance of order: 
+*/
+@keyframes fall-2 {
+	0% {
+		transform: rotate(0) translate(250px,0);
+	}
+	100% {
+		transform: rotate(360deg) translate(250px,500px);
+	}
+}
+
+
+/* 
+3) new way to write it (order doesn't matter) : 
+*/
+@keyframes fall-new {
+	0% {
+		translate: 250px 0;
+		rotate: 0;
+	}
+	100% {
+		rotate: 360deg;
+		translate: 250px  250px;
+	}
+	
+}
+
+
+
+.cls-1 {
+	fill: #00aeef;
+  }
+
+  .cls-2 {
+	fill: #fff200;
+	stroke: #231f20;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 6px;
+  }
+  

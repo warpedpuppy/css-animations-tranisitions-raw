@@ -1,0 +1,66 @@
+svg {
+	width: 500px;
+	height: 500px;
+	border:  1px solid black;
+}
+
+svg * {
+	transform-box: fill-box;
+}
+
+
+#yellow-square {
+	transform-origin: center;
+
+	animation-name: fall-new;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+
+	animation-iteration-count: infinite;
+	
+	/* 
+	animation-iteration-count: 2;
+	animation-direction: reverse;
+	animation-fill-mode: both; 
+	*/
+	
+}
+
+svg:hover #yellow-square {
+	animation-play-state: paused;
+}
+
+
+@keyframes fall {
+	0% {
+		transform: translate(250px,0);
+	}
+	100% {
+		transform: translate(250px,500px);
+	}
+}
+
+@keyframes fall-new {
+	0% {
+		translate: 250px 0;
+	}
+	100% {
+		translate: 250px 500px;
+	}
+}
+
+
+
+.cls-1 {
+	fill: #00aeef;
+  }
+
+  .cls-2 {
+	fill: #fff200;
+	stroke: #231f20;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 6px;
+  }
+  

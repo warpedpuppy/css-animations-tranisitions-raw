@@ -1,0 +1,70 @@
+svg {
+	width: 500px;
+	height: 500px;
+	border:  1px solid black;
+}
+
+svg * {
+	transform-box: fill-box;
+}
+
+
+#yellow-square {
+	transform-origin: center;
+	animation-name: fall-new;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* 
+1) importance of looking at existing html attributes 
+*/
+@keyframes fall {
+	0% {
+		transform: translate(250px,0);
+	}
+	100% {
+		transform: translate(250px,500px);
+	}
+}
+
+/* 
+2) importance of transform-box: fill-box (comment out transform-box above) 
+*/
+@keyframes fall-1 {
+	0% {
+		transform: translate(250px,0) rotate(0);
+	}
+	100% {
+		transform: translate(250px,500px) rotate(360deg);
+	}
+}
+
+/* 
+3) importance of order: 
+*/
+@keyframes fall-2 {
+	0% {
+		transform: rotate(0) translate(250px,0);
+	}
+	100% {
+		transform: rotate(360deg) translate(250px,500px);
+	}
+}
+
+
+/* 
+3) new way to write it (order doesn't matter) : 
+*/
+@keyframes fall-new {
+	0% {
+		translate: 250px 0;
+		rotate: 0;
+	}
+	100% {
+		rotate: 360deg;
+		translate: 250px  250px;
+	}
+	
+}
